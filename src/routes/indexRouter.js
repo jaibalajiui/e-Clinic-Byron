@@ -8,6 +8,10 @@ const orderRouter = require('./api/orderRouter');
 const encounterRouter = require('./api/encounterRouter');
 
 // Routing to all endpoints
+router.get('/', function(req, res, next) {
+    res.render('index', { title: 'e-Clinic REST' });
+});
+
 router.use('/person',personRouter);
 
 router.use('/role',rolesRouter);
