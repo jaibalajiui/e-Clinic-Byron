@@ -5,6 +5,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import indexRouter from './routes/indexRouter.js';
 import createError from 'http-errors';
+import mongoose from 'mongoose';
 
 const app = express();
 const port = 3000;
@@ -20,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 // Routing
-app.use('/', indexRouter);
+app.use(indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -38,6 +39,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(port, ()=>{
-  console.log('app started at port', port);
+mongoose.connect('mongodb://localhost:27017/e-Clinic').then((result)=>{
+  app.listen(port, ()=>{
+    console.log('app started at port', port);
+  });
+}).catch((err) =>{
+  console.log('unable to connect to database', err);
 });
