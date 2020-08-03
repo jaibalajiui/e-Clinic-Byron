@@ -1,4 +1,5 @@
-const express = require('express');
+import express from 'express';
+// eslint-disable-next-line new-cap
 const router = express.Router();
 
 const personRouter = require('./api/personRouter');
@@ -29,4 +30,4 @@ router.use('/error', (req, res, next)=>{
   console.log('error called');
 });
 
-module.exports = router;
+export default router;
