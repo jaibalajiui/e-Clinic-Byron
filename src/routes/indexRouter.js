@@ -10,8 +10,8 @@ const encounterRouter = require('./api/encounterRouter');
 
 // Routing to all endpoints
 router.get('/', function(req, res, next) {
-  res.render('index', {title: 'e-Clinic REST'});
-  next();
+  res.status(200).json({status: 'sucess'});
+  res.end();
 });
 
 router.use('/person', personRouter);
@@ -23,11 +23,5 @@ router.use('/problems', problemsRouter);
 router.use('/order', orderRouter);
 
 router.use('/encounter', encounterRouter);
-
-router.use('/error', (req, res, next)=>{
-  res.status(404);
-  res.render('error');
-  console.log('error called');
-});
 
 export default router;
