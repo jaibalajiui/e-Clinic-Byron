@@ -19,7 +19,6 @@
   "homepage": "https://github.com/jaibalajiui/e-Clinic-Byron#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "^4.17.1",

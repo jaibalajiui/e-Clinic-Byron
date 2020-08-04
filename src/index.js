@@ -9,8 +9,10 @@ import mongoose from 'mongoose';
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json());
-app.use(bodyParser.urlencoded({extended: false}));
+
+// eslint-disable-next-line max-len
+// app.use(bodyParser.urlencoded({extended: false})); // for x-www-form-urlencoded <form>
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
