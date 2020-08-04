@@ -1,6 +1,6 @@
 import {personModel as Person} from '../models/person';
 
-const getPerson = (req, res, next)=>{
+const addPerson = (req, res, next)=>{
   new Person({
     name: req.body.name,
     gender: req.body.gender,
@@ -15,8 +15,8 @@ const getPerson = (req, res, next)=>{
   });
 };
 
-const postPerson = (req, res, next)=>{
+const getPerson = (req, res, next)=>{
 
 };
 
-export {getPerson, postPerson};
+export {getPerson, addPerson};
