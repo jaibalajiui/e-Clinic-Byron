@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import indexRouter from './routes/indexRouter.js';
+import indexRouter from './api/indexRouter';
 import mongoose from 'mongoose';
 
 const app = express();

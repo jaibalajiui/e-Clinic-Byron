@@ -1,6 +1,6 @@
 import express from 'express';
-import {createPersonValidator} from '../../util/validators/personValidator';
-import * as personController from '../../controllers/personController';
+import {createPersonValidator} from './personValidator';
+import * as personController from './personController';
 // eslint-disable-next-line new-cap
 const router = express.Router();
 

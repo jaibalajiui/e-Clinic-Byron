@@ -2,11 +2,11 @@ import express from 'express';
 // eslint-disable-next-line new-cap
 const router = express.Router();
 
-const personRouter = require('./api/personRouter');
-const rolesRouter = require('./api/rolesRouter');
-const problemsRouter = require('./api/problemsRouter');
-const orderRouter = require('./api/orderRouter');
-const encounterRouter = require('./api/encounterRouter');
+const personRouter = require('./person/personRouter');
+const rolesRouter = require('./roles/rolesRouter');
+const problemsRouter = require('./problems/problemsRouter');
+const orderRouter = require('./order/orderRouter');
+const encounterRouter = require('./encounter/encounterRouter');
 
 // Routing to all endpoints
 router.get('/', function(req, res, next) {

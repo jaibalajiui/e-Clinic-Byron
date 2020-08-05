@@ -1,4 +1,4 @@
-import {personModel as Person} from '../models/person';
+import {personModel as Person} from './personModel';
 
 const addPerson = (req, res, next)=>{
   new Person({
