@@ -1,12 +1,13 @@
 import express from 'express';
+import personRouter from './person/personRouter';
+import rolesRouter from './roles/rolesRouter';
+import problemsRouter from './problems/problemsRouter';
+import orderRouter from './order/orderRouter';
+import encounterRouter from './encounter/encounterRouter';
+import userRouter from './user/userRouter';
+
 // eslint-disable-next-line new-cap
 const router = express.Router();
-
-const personRouter = require('./person/personRouter');
-const rolesRouter = require('./roles/rolesRouter');
-const problemsRouter = require('./problems/problemsRouter');
-const orderRouter = require('./order/orderRouter');
-const encounterRouter = require('./encounter/encounterRouter');
 
 // Routing to all endpoints
 router.get('/', function(req, res, next) {
@@ -23,5 +24,7 @@ router.use('/problems', problemsRouter);
 router.use('/order', orderRouter);
 
 router.use('/encounter', encounterRouter);
+
+router.use('/user', userRouter);
 
 export default router;
